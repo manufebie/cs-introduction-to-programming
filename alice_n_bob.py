@@ -19,10 +19,12 @@ def clear_and_greet():
 *********************************************
 ''')
 
-def start_game():
+def start_game():q
     '''
     For now, the game only creates a list that contains the number of stones inputted by the user.
-    And then it checks if the last 'stone' in the last is odd. If odd Alice wins the game.
+    And then it checks if the last 'stone' in the list is odd. If odd Alice wins the game.
+
+    It doesn't let Alice play first and let each player remove two stones each turn until there is no two stones to taken left.
     '''
     clear_and_greet() # clears screen and shows game "logo"
 
