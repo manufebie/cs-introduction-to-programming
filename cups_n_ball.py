@@ -28,7 +28,7 @@ def swap_the_cups():
         
     print() # print() for empty space and readability
 
-    while shuffles < shuffle_me:
+    while shuffles < shuffle_me: # shuffles the list/cups according to user input
         shuffles += 1
         shuffle(cups) # shuffles the cups randomly
         print('Postion during {} shuffle: {}'.format(shuffles, cups)) # print and track the position of the ball while shuffling
