@@ -29,23 +29,42 @@ def clear_and_greet():
 
 def swap_the_cups():
     clear_and_greet()
-    cups = [1, 0, 0] # cups represented in a list. 1 represents the ball inside the cup
-    shuffle(cups) # shuffles the cups randomly
+    cups = ['X', 0, 0] # cups represented in a list. X represents the ball inside the cup
+    shuffles = 0
 
-    if cups[0] == 1:
-        print(cups)
+    while True:
+        try:
+            shuffle_me = int(input('How many time should the cups be shuffled: ')) # ask user how many times should be shuffled
+            break
+        except ValueError:
+            clear_and_greet()
+            print('Oops!! Seems like you didn\'t enter a number. Try again\n')
+            continue
+        
+    print() # print() for empty space and readability
+
+    while shuffles < shuffle_me:
+        shuffles += 1
+        shuffle(cups) # shuffles the cups randomly
+        print('Postion during {} shuffle: {}'.format(shuffles, cups)) # print and track the position of the ball while shuffling
+
+    if cups[0] == 'X':
+        print()
+        print('Position of the ball is: {}'.format(cups)) # Show the ball position inside list
         print()
         print('The ball is under the FIRST cup')
-    elif cups[1] == 1:
-        print(cups)
+    elif cups[1] == 'X':
+        print()
+        print('Position of the ball is: {}'.format(cups))
         print()
         print('The ball is under the SECOND cup')
     else:
-        print(cups)
+        print()
+        print('Position of the ball is: {}'.format(cups))
         print()
         print('The ball is under the THIRD cup')
 
-while True:
+while True: # plays
     swap_the_cups()
     print()
 
