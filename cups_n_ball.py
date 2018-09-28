@@ -1,18 +1,3 @@
-'''
-Jealous​ ​ of​ ​ Mirko’s​ ​ position​ ​ as​ ​ head​ ​ of​ ​ the​ ​ village,​ ​ Borko​ ​ stormed​ ​ into​ ​ his
-tent​ ​ and​ ​ tried​ ​ to​ ​ demonstrate​ ​ Mirko’s​ ​ incompetence​ ​ for​ ​ leadership​ ​ with​ ​ a
-trick.
-
-Borko​ ​ puts​ ​ three​ ​ opaque​ ​ cups​ ​ onto​ ​ the​ ​ table​ ​ next​ ​ to​ ​ each​ ​ other​ ​ (opening
-facing​ ​ down)​ ​ and​ ​ a ​ ​ small​ ​ ball​ ​ under​ ​ the​ ​ leftmost​ ​ cup.​ ​ He​ ​ then​ ​ swaps​ ​ two
-cups​ ​ in​ ​ one​ ​ of​ ​ three​ ​ possible​ ​ ways​ ​ a ​ ​ number​ ​ of​ ​ times.​ ​ Mirko​ ​ has​ ​ to​ ​ tell
-which​ ​ cup​ ​ the​ ​ ball​ ​ ends​ ​ up​ ​ under.
-
-Wise​ ​ Mirko​ ​ grins​ ​ with​ ​ his​ ​ arms​ ​ crossed​ ​ while​ ​ Borko​ ​ struggles​ ​ to​ ​ move
-the​ ​ cups​ ​ faster​ ​ and​ ​ faster.​ ​ What​ ​ Borko​ ​ does​ ​ not​ ​ know​ ​ is​ ​ that
-programmers​ ​ in​ ​ the​ ​ back​ ​ are​ ​ recording​ ​ all​ ​ his​ ​ moves​ ​ and​ ​ will​ ​ use​ ​ a
-simple​ ​ program​ ​ to​ ​ determine​ ​ where​ ​ the​ ​ ball​ ​ is.​ ​ Write​ ​ that​ ​ program.
-'''
 import os,sys
 
 from random import shuffle
@@ -34,7 +19,7 @@ def swap_the_cups():
 
     while True:
         try:
-            shuffle_me = int(input('How many time should the cups be shuffled: ')) # ask user how many times should be shuffled
+            shuffle_me = int(input('How many times should the cups be shuffled: ')) # ask user how many times should be shuffled
             break
         except ValueError:
             clear_and_greet()
@@ -50,21 +35,22 @@ def swap_the_cups():
 
     if cups[0] == 'X':
         print()
-        print('Position of the ball is: {}'.format(cups)) # Show the ball position inside list
+        print('Position of the ball after the last shuffle: {}'.format(cups)) # Show the ball position inside list
         print()
         print('The ball is under the FIRST cup')
     elif cups[1] == 'X':
         print()
-        print('Position of the ball is: {}'.format(cups))
+        print('Position of the ball after the last shuffle: {}'.format(cups))
         print()
         print('The ball is under the SECOND cup')
     else:
         print()
-        print('Position of the ball is: {}'.format(cups))
+        print('Position of the ball after the last shuffle: {}'.format(cups))
         print()
         print('The ball is under the THIRD cup')
 
-while True: # plays
+
+while True: # play game until user enter 'n'
     swap_the_cups()
     print()
 
