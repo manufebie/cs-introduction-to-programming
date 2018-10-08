@@ -10,3 +10,4 @@ This repository contains assigments/exercises for the **Introduction To Programm
    4. CupsNBal
    5. Pascal Triangle
    6. Petshop (Quiz)
+   7. Sorting algorithm

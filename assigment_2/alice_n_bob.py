@@ -19,7 +19,7 @@ def clear_and_greet():
 *********************************************
 ''')
 
-def start_game():q
+def start_game():
     '''
     For now, the game only creates a list that contains the number of stones inputted by the user.
     And then it checks if the last 'stone' in the list is odd. If odd Alice wins the game.
